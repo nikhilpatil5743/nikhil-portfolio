@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 export default function Contact() {
   return (
     <section id="contact" className="py-16 md:py-24 px-6">
@@ -60,6 +61,19 @@ export default function Contact() {
           >
             Contact On WhatsApp
           </a>
+          <div className="flex justify-center gap-6 mt-8 text-3xl">
+  <a href="https://github.com/nikhilpatil5743" target="_blank">
+    <FaGithub className="text-zinc-400 hover:text-pink-500" />
+  </a>
+
+  <a href="https://www.linkedin.com/in/nikhil-dhondge" target="_blank">
+    <FaLinkedin className="text-zinc-400 hover:text-pink-500" />
+  </a>
+
+  <a href="https://www.instagram.com/nikhilpatil.design/" target="_blank">
+    <FaInstagram className="text-zinc-400 hover:text-pink-500" />
+  </a>
+</div>
 
         </div>
 
