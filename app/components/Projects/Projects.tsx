@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
@@ -29,30 +32,46 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 px-6">
+    <section id="projects" className="py-12 lg:py-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
-        {/* Section Heading */}
-        <p className="text-purple-500 mb-4 font-medium tracking-wider uppercase text-sm">
+        {/* Section Heading - Sliding from the Left */}
+        <motion.p 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-purple-500 mb-4 font-medium tracking-wider uppercase text-sm"
+        >
           My Projects
-        </p>
+        </motion.p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
+        <motion.h2 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold text-white mb-16"
+        >
           Featured Work
-        </h2>
+        </motion.h2>
 
-        {/* Projects Grid */}
+        {/* Projects Grid with Staggered Fade-Up */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group relative bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 rounded-[24px] p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] overflow-hidden backdrop-blur-sm flex flex-col h-full"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }} // Wave effect delay
+              className="group relative bg-zinc-900/50 border border-zinc-800 hover:border-purple-500/50 rounded-[24px] p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] overflow-hidden backdrop-blur-sm flex flex-col h-full cursor-pointer"
             >
               {/* Top Tech Stack Badges */}
               <div className="flex flex-wrap gap-2 mb-5">
                 {project.techStack.map((tech, i) => (
-                  <span key={i} className="text-xs font-semibold px-3 py-1 bg-zinc-800/80 text-zinc-300 rounded-lg border border-zinc-700/50">
+                  <span key={i} className="text-xs font-semibold px-3 py-1 bg-zinc-800/80 text-zinc-300 rounded-lg border border-zinc-700/50 group-hover:border-purple-500/30 transition-colors duration-300">
                     {tech}
                   </span>
                 ))}
@@ -69,8 +88,8 @@ export default function Projects() {
               {/* Features List with Custom Checkmarks */}
               <ul className="space-y-3 text-zinc-300 mb-8 text-sm mt-auto">
                 {project.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="flex items-center justify-center min-w-[20px] w-5 h-5 rounded-full bg-green-500/10 text-green-400 text-xs">
+                  <li key={i} className="flex items-center gap-3 group-hover:text-zinc-200 transition-colors duration-300">
+                    <span className="flex items-center justify-center min-w-[20px] w-5 h-5 rounded-full bg-purple-500/10 text-purple-400 text-xs group-hover:bg-purple-500/20 transition-colors duration-300">
                       ✓
                     </span>
                     {feature}
@@ -93,7 +112,7 @@ export default function Projects() {
                   GitHub
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
 
         </div>
