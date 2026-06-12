@@ -61,7 +61,7 @@ export default function Contact() {
             >
               <p className="text-zinc-500 text-sm font-medium mb-2 uppercase tracking-wider">Email</p>
               <a href="mailto:nd0437210@gmail.com" className="text-white text-lg hover:text-pink-400 transition-colors">
-                nd0437210@gmail.com
+                nikhilpatil.design@gmail.com
               </a>
             </motion.div>
 
