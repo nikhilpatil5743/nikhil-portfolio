@@ -19,14 +19,11 @@ export default function Projects() {
     // --- GRAPHIC DESIGN (Only ONE Mega Card) ---
     { id: 4, category: "Graphic Design", title: "Graphic Design Portfolio", description: "A complete exhibition of my visual storytelling work. Explore 10+ premium logo designs, festival banners, wedding cards, and brand identity projects in the full gallery.", techStack: ["Illustrator", "Photoshop", "Canva", "Figma"], icon: <PenTool />, linkText: "View Full Gallery", link: "/graphic-design", isMegaCard: true },
 
-    // --- VIDEO EDITING ---
-    { id: 5, category: "Video Editing", title: "YouTube Long-form", description: "Professional YouTube editing with high retention techniques and B-roll integration.", techStack: ["Premiere Pro"], icon: <PlayCircle />, linkText: "Coming Soon", link: "#" },
-    { id: 6, category: "Video Editing", title: "Instagram Reels", description: "Viral short-form content with snappy transitions and dynamic captions.", techStack: ["CapCut", "Premiere"], icon: <PlayCircle />, linkText: "Coming Soon", link: "#" },
-    { id: 7, category: "Video Editing", title: "Promotional Ads", description: "Business commercial videos and cinematic brand storytelling.", techStack: ["After Effects"], icon: <PlayCircle />, linkText: "Coming Soon", link: "#" },
+    // --- VIDEO EDITING (NEW Mega Card 🔥) ---
+    { id: 5, category: "Video Editing", title: "Video Editing Showcase", description: "High-retention Instagram Reels, YouTube Shorts, and cinematic promotional videos. Snappy transitions, professional color grading, and dynamic captions.", techStack: ["Premiere Pro", "CapCut", "After Effects"], icon: <PlayCircle />, linkText: "Watch Reels & Videos", link: "/video-editing", isMegaCard: true },
 
-    // --- META ADS ---
-    { id: 8, category: "Meta Ads", title: "Lead Generation", description: "Converting Meta Ads campaigns for real estate and local businesses.", techStack: ["Meta Business Suite"], icon: <TrendingUp />, linkText: "Demo Case Study", link: "#" },
-    { id: 9, category: "Meta Ads", title: "E-commerce Scaling", description: "ROAS-driven ad strategies for Shopify and online brands.", techStack: ["Pixel Tracking"], icon: <TrendingUp />, linkText: "Demo Case Study", link: "#" }
+    // --- META ADS (NEW Mega Card 🚀) ---
+    { id: 8, category: "Meta Ads", title: "Performance Marketing & Ads", description: "Data-driven Facebook and Instagram ad campaigns. Proven results in high-quality lead generation, health & fitness niches, bulk lead selling, and digital product sales.", techStack: ["Facebook Ads", "Meta Pixel", "Lead Generation"], icon: <TrendingUp />, linkText: "View Ad Campaigns", link: "/meta-ads", isMegaCard: true }
   ];
 
   const filteredProjects = activeTab === "All" ? projects : projects.filter(p => p.category === activeTab);
