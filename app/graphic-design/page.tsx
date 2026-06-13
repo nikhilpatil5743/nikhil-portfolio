@@ -72,7 +72,7 @@ export default function GraphicDesignGallery() {
       {/* Header Area */}
       <div className="mb-16">
         {!activeFolder ? (
-          <Link href="/#portfolio" className="inline-flex items-center gap-2 text-zinc-500 hover:text-purple-400 mb-10 transition-colors">
+          <Link href="/#projects" className="inline-flex items-center gap-2 text-zinc-500 hover:text-purple-400 mb-10 transition-colors">
             <ArrowLeft size={20} /> Back to Portfolio
           </Link>
         ) : (

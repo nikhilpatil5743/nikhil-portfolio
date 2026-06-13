@@ -41,8 +41,15 @@ export default function Projects() {
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((cat) => (
-            <button key={cat} onClick={() => setActiveTab(cat)} className={`relative px-6 py-2.5 rounded-full text-sm font-medium transition-all ${activeTab === cat ? "text-white" : "text-zinc-400 hover:text-white hover:bg-white/5"}`}>
-              {activeTab === cat && <motion.div layoutId="activeTab2" className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full -z-10" />}
+            <button 
+              key={cat} 
+              onClick={() => setActiveTab(cat)} 
+              className={`relative px-6 py-2.5 rounded-full text-sm font-bold border transition-all duration-300 ${
+                activeTab === cat 
+                  ? "bg-purple-600/20 border-purple-500 text-white shadow-[0_0_20px_rgba(168,85,247,0.3)]" 
+                  : "bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:border-zinc-600 hover:text-white"
+              }`}
+            >
               {cat}
             </button>
           ))}
